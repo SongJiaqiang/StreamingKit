@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 #import "STKAudioPlayer.h"
+#import "STKQueueEntry.h"
+#import "STKDataSource.h"
+#import "STKAutoRecoveringHTTPDataSource.h"
 
 //! Project version number for AudioKit.
 FOUNDATION_EXPORT double AudioKitVersionNumber;
