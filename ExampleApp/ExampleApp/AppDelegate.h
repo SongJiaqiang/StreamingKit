@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "STKAudioPlayer.h"
+#import <AudioKit/AudioKit.h>
 #import "AudioPlayerView.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, AudioPlayerViewDelegate>

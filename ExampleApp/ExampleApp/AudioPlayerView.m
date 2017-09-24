@@ -58,27 +58,32 @@
 		CGSize size = CGSizeMake(220, 50);
 		
 		playFromHTTPButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		playFromHTTPButton.frame = CGRectMake((frame.size.width - size.width) / 2, frame.size.height * 0.10, size.width, size.height);
+		playFromHTTPButton.frame = CGRectMake((frame.size.width - size.width) / 2, size.height * 1, size.width, size.height);
 		[playFromHTTPButton addTarget:self action:@selector(playFromHTTPButtonTouched) forControlEvents:UIControlEventTouchUpInside];
 		[playFromHTTPButton setTitle:@"Play from HTTP" forState:UIControlStateNormal];
         
         playFromIcecastButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        playFromIcecastButton.frame = CGRectMake((frame.size.width - size.width) / 2, frame.size.height * 0.10 + 35, size.width, size.height);
+        playFromIcecastButton.frame = CGRectMake((frame.size.width - size.width) / 2,  size.height * 2, size.width, size.height);
         [playFromIcecastButton addTarget:self action:@selector(playFromIcecasButtonTouched) forControlEvents:UIControlEventTouchUpInside];
         [playFromIcecastButton setTitle:@"Play from Icecast" forState:UIControlStateNormal];
 
 		playFromLocalFileButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		playFromLocalFileButton.frame = CGRectMake((frame.size.width - size.width) / 2, frame.size.height * 0.10 + 70, size.width, size.height);
+        playFromLocalFileButton.frame = CGRectMake((frame.size.width - size.width) / 2,  size.height * 3, size.width, size.height);
 		[playFromLocalFileButton addTarget:self action:@selector(playFromLocalFileButtonTouched) forControlEvents:UIControlEventTouchUpInside];
 		[playFromLocalFileButton setTitle:@"Play from Local File" forState:UIControlStateNormal];
         
+        playFromiTunesLibrary = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        playFromiTunesLibrary.frame = CGRectMake((frame.size.width - size.width) / 2,  size.height * 4, size.width, size.height);
+        [playFromiTunesLibrary addTarget:self action:@selector(playFromiTunesLibraryTouched) forControlEvents:UIControlEventTouchUpInside];
+        [playFromiTunesLibrary setTitle:@"Play from iTunes Lib" forState:UIControlStateNormal];
+        
         queueShortFileButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		queueShortFileButton.frame = CGRectMake((frame.size.width - size.width) / 2, frame.size.height * 0.10 + 105, size.width, size.height);
+		queueShortFileButton.frame = CGRectMake((frame.size.width - size.width) / 2,  size.height * 5, size.width, size.height);
 		[queueShortFileButton addTarget:self action:@selector(queueShortFileButtonTouched) forControlEvents:UIControlEventTouchUpInside];
 		[queueShortFileButton setTitle:@"Queue short file" forState:UIControlStateNormal];
 		
 		queuePcmWaveFileFromHTTPButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		queuePcmWaveFileFromHTTPButton.frame = CGRectMake((frame.size.width - size.width) / 2, frame.size.height * 0.10 + 140, size.width, size.height);
+		queuePcmWaveFileFromHTTPButton.frame = CGRectMake((frame.size.width - size.width) / 2,  size.height * 6, size.width, size.height);
 		[queuePcmWaveFileFromHTTPButton addTarget:self action:@selector(queuePcmWaveFileButtonTouched) forControlEvents:UIControlEventTouchUpInside];
 		[queuePcmWaveFileFromHTTPButton setTitle:@"Queue PCM/WAVE from HTTP" forState:UIControlStateNormal];
         
@@ -128,6 +133,7 @@
 		[self addSubview:playFromHTTPButton];
         [self addSubview:playFromIcecastButton];
 		[self addSubview:playFromLocalFileButton];
+        [self addSubview:playFromiTunesLibrary];
         [self addSubview:queueShortFileButton];
 		[self addSubview:queuePcmWaveFileFromHTTPButton];
         [self addSubview:repeatSwitch];
@@ -228,6 +234,11 @@
 -(void) playFromLocalFileButtonTouched
 {
 	[self.delegate audioPlayerViewPlayFromLocalFileSelected:self];
+}
+
+-(void) playFromiTunesLibraryTouched
+{
+    [self.delegate audioPlayerViewPlayFromiTunesLibrarySelected:self];
 }
 
 -(void) queueShortFileButtonTouched

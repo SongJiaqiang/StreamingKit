@@ -33,7 +33,7 @@
  **********************************************************************************/
 
 #import <UIKit/UIKit.h>
-#import "STKAudioPlayer.h"
+#import <AudioKit/AudioKit.h>
 
 @class AudioPlayerView;
 
@@ -43,6 +43,7 @@
 -(void) audioPlayerViewQueueShortFileSelected:(AudioPlayerView*)audioPlayerView;
 -(void) audioPlayerViewPlayFromLocalFileSelected:(AudioPlayerView*)audioPlayerView;
 -(void) audioPlayerViewQueuePcmWaveFileSelected:(AudioPlayerView*)audioPlayerView;
+-(void) audioPlayerViewPlayFromiTunesLibrarySelected:(AudioPlayerView*)audioPlayerView;
 @end
 
 @interface AudioPlayerView : UIView<STKAudioPlayerDelegate>
@@ -57,11 +58,12 @@
 	UIButton* muteButton;
 	UIButton* playButton;
     UIButton* stopButton;
-	UIButton* playFromHTTPButton;
+    UIButton* playFromHTTPButton;
     UIButton* playFromIcecastButton;
+    UIButton* playFromLocalFileButton;
+    UIButton* playFromiTunesLibrary;
     UIButton* queueShortFileButton;
-	UIButton* queuePcmWaveFileFromHTTPButton;
-	UIButton* playFromLocalFileButton;
+    UIButton* queuePcmWaveFileFromHTTPButton;
 	UIView* meter;
 }
 

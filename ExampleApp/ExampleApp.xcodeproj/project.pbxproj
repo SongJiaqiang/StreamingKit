@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6360F2401F7769E500070C4E /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F82C1D1F7764FF00F3B5A5 /* AudioKit.framework */; };
+		6360F2411F776A4B00070C4E /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F82C1D1F7764FF00F3B5A5 /* AudioKit.framework */; };
+		6360F2421F776A4B00070C4E /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63F82C1D1F7764FF00F3B5A5 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63F82BF61F775EBC00F3B5A5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F82BF51F775EBC00F3B5A5 /* MediaPlayer.framework */; };
 		A1115935188D686000641365 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1115934188D686000641365 /* Foundation.framework */; };
 		A1115937188D686000641365 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1115936188D686000641365 /* CoreGraphics.framework */; };
 		A1115939188D686000641365 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1115938188D686000641365 /* UIKit.framework */; };
@@ -19,7 +23,6 @@
 		A1115950188D686000641365 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1115938188D686000641365 /* UIKit.framework */; };
 		A1115958188D686000641365 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1115956188D686000641365 /* InfoPlist.strings */; };
 		A111595A188D686000641365 /* ExampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1115959188D686000641365 /* ExampleAppTests.m */; };
-		A1115964188D691500641365 /* libStreamingKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1115963188D691500641365 /* libStreamingKit.a */; };
 		A1115967188D6AEE00641365 /* AudioPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1115966188D6AEE00641365 /* AudioPlayerView.m */; };
 		A111596C188D6C8100641365 /* sample.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A111596B188D6C8100641365 /* sample.m4a */; };
 		A111596F188D6DB100641365 /* SampleQueueId.m in Sources */ = {isa = PBXBuildFile; fileRef = A111596E188D6DB100641365 /* SampleQueueId.m */; };
@@ -30,6 +33,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6360F2431F776A4B00070C4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63F82C171F7764FF00F3B5A5 /* AudioKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 635AD1C91F4993CA002AFE0D;
+			remoteInfo = AudioKit;
+		};
+		63F82C1C1F7764FF00F3B5A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63F82C171F7764FF00F3B5A5 /* AudioKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 635AD1CA1F4993CA002AFE0D;
+			remoteInfo = AudioKit;
+		};
+		63F82C1E1F7764FF00F3B5A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63F82C171F7764FF00F3B5A5 /* AudioKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 635AD1D31F4993CB002AFE0D;
+			remoteInfo = AudioKitTests;
+		};
+		63F82C211F77651500F3B5A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63F82C171F7764FF00F3B5A5 /* AudioKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 635AD1C91F4993CA002AFE0D;
+			remoteInfo = AudioKit;
+		};
 		A1115951188D686000641365 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A1115929188D686000641365 /* Project object */;
@@ -39,7 +70,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6360F2451F776A4B00070C4E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6360F2421F776A4B00070C4E /* AudioKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		63F82BF51F775EBC00F3B5A5 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		63F82C171F7764FF00F3B5A5 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AudioKit.xcodeproj; path = ../AudioKit/AudioKit.xcodeproj; sourceTree = "<group>"; };
 		A1115931188D686000641365 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1115934188D686000641365 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1115936188D686000641365 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,10 +121,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6360F2411F776A4B00070C4E /* AudioKit.framework in Frameworks */,
+				6360F2401F7769E500070C4E /* AudioKit.framework in Frameworks */,
+				63F82BF61F775EBC00F3B5A5 /* MediaPlayer.framework in Frameworks */,
 				A17FFB6918A002E400BAA7FF /* AVFoundation.framework in Frameworks */,
 				A17FFB6318A0028300BAA7FF /* AudioToolbox.framework in Frameworks */,
 				A1EBEE64188DE34500681B04 /* SystemConfiguration.framework in Frameworks */,
-				A1115964188D691500641365 /* libStreamingKit.a in Frameworks */,
 				A1115937188D686000641365 /* CoreGraphics.framework in Frameworks */,
 				A1115939188D686000641365 /* UIKit.framework in Frameworks */,
 				A1115935188D686000641365 /* Foundation.framework in Frameworks */,
@@ -97,9 +146,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63F82C181F7764FF00F3B5A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63F82C1D1F7764FF00F3B5A5 /* AudioKit.framework */,
+				63F82C1F1F7764FF00F3B5A5 /* AudioKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A1115928188D686000641365 = {
 			isa = PBXGroup;
 			children = (
+				63F82C171F7764FF00F3B5A5 /* AudioKit.xcodeproj */,
 				A111593A188D686000641365 /* ExampleApp */,
 				A1115953188D686000641365 /* ExampleAppTests */,
 				A1115933188D686000641365 /* Frameworks */,
@@ -119,6 +178,7 @@
 		A1115933188D686000641365 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63F82BF51F775EBC00F3B5A5 /* MediaPlayer.framework */,
 				A17FFB6218A0028300BAA7FF /* AudioToolbox.framework */,
 				A1F5E491189EB3F20070B03F /* AVFoundation.framework */,
 				A1F5E48F189EB3CB0070B03F /* AudioUnit.framework */,
@@ -196,10 +256,13 @@
 				A111592D188D686000641365 /* Sources */,
 				A111592E188D686000641365 /* Frameworks */,
 				A111592F188D686000641365 /* Resources */,
+				6360F2451F776A4B00070C4E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				63F82C221F77651500F3B5A5 /* PBXTargetDependency */,
+				6360F2441F776A4B00070C4E /* PBXTargetDependency */,
 			);
 			name = ExampleApp;
 			productName = ExampleApp;
@@ -251,6 +314,12 @@
 			mainGroup = A1115928188D686000641365;
 			productRefGroup = A1115932188D686000641365 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 63F82C181F7764FF00F3B5A5 /* Products */;
+					ProjectRef = 63F82C171F7764FF00F3B5A5 /* AudioKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A1115930188D686000641365 /* ExampleApp */,
@@ -258,6 +327,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		63F82C1D1F7764FF00F3B5A5 /* AudioKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AudioKit.framework;
+			remoteRef = 63F82C1C1F7764FF00F3B5A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		63F82C1F1F7764FF00F3B5A5 /* AudioKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AudioKitTests.xctest;
+			remoteRef = 63F82C1E1F7764FF00F3B5A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A111592F188D686000641365 /* Resources */ = {
@@ -304,6 +390,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6360F2441F776A4B00070C4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AudioKit;
+			targetProxy = 6360F2431F776A4B00070C4E /* PBXContainerItemProxy */;
+		};
+		63F82C221F77651500F3B5A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AudioKit;
+			targetProxy = 63F82C211F77651500F3B5A5 /* PBXContainerItemProxy */;
+		};
 		A1115952188D686000641365 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A1115930188D686000641365 /* ExampleApp */;
@@ -423,8 +519,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExampleApp/ExampleApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "ExampleApp/ExampleApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "abstractpath.com.${PRODUCT_NAME:rfc1034identifier}";
@@ -441,8 +539,10 @@
 				DEVELOPMENT_TEAM = 4T9J35ZW6C;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExampleApp/ExampleApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "ExampleApp/ExampleApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "abstractpath.com.${PRODUCT_NAME:rfc1034identifier}";
