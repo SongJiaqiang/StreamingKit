@@ -295,7 +295,16 @@ static void AudioFileStreamPacketsProc(void* clientData, UInt32 numberBytes, UIn
         .componentFlagsMask = 0
 	};
     
-    const int bytesPerSample = sizeof(AudioSampleType);
+#if !CA_PREFER_FIXED_POINT
+//    CA_CANONICAL_DEPRECATED typedef Float32     AudioSampleType;
+//    CA_CANONICAL_DEPRECATED typedef Float32     AudioUnitSampleType;
+    const int bytesPerSample = sizeof(Float32);
+#else
+//    CA_CANONICAL_DEPRECATED typedef SInt16      AudioSampleType;
+//    CA_CANONICAL_DEPRECATED typedef SInt32      AudioUnitSampleType;
+    const int bytesPerSample = sizeof(SInt16);
+#endif
+    
     
     canonicalAudioStreamBasicDescription = (AudioStreamBasicDescription)
     {
@@ -856,7 +865,7 @@ static void AudioFileStreamPacketsProc(void* clientData, UInt32 numberBytes, UIn
         }
 		case kAudioFileStreamProperty_ReadyToProducePackets:
         {
-			if (!audioConverterAudioStreamBasicDescription.mFormatID == kAudioFormatLinearPCM)
+			if (audioConverterAudioStreamBasicDescription.mFormatID != kAudioFormatLinearPCM)
 			{
 				discontinuous = YES;
 			}
