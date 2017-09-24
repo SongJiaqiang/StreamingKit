@@ -114,14 +114,14 @@ static void PopulateOptionsWithDefault(STKAudioPlayerOptions* options)
 		return value;\
 	}
 
-typedef enum
-{
-	STKAudioPlayerInternalStateInitialised = 0,
+
+typedef NS_ENUM(NSUInteger, STKAudioPlayerInternalState) {
+    STKAudioPlayerInternalStateInitialised = 0,
     STKAudioPlayerInternalStateRunning = 1,
     STKAudioPlayerInternalStatePlaying = (1 << 1) | STKAudioPlayerInternalStateRunning,
     STKAudioPlayerInternalStateRebuffering = (1 << 2) | STKAudioPlayerInternalStateRunning,
-	STKAudioPlayerInternalStateStartingThread = (1 << 3) | STKAudioPlayerInternalStateRunning,
-	STKAudioPlayerInternalStateWaitingForData = (1 << 4) | STKAudioPlayerInternalStateRunning,
+    STKAudioPlayerInternalStateStartingThread = (1 << 3) | STKAudioPlayerInternalStateRunning,
+    STKAudioPlayerInternalStateWaitingForData = (1 << 4) | STKAudioPlayerInternalStateRunning,
     /* Same as STKAudioPlayerInternalStateWaitingForData but isn't immediately raised as a buffering event */
     STKAudioPlayerInternalStateWaitingForDataAfterSeek = (1 << 5) | STKAudioPlayerInternalStateRunning,
     STKAudioPlayerInternalStatePaused = (1 << 6) | STKAudioPlayerInternalStateRunning,
@@ -129,8 +129,8 @@ typedef enum
     STKAudioPlayerInternalStatePendingNext = (1 << 10),
     STKAudioPlayerInternalStateDisposed = (1 << 30),
     STKAudioPlayerInternalStateError = (1 << 31)
-}
-STKAudioPlayerInternalState;
+};
+
 
 #pragma mark STKFrameFilterEntry
 

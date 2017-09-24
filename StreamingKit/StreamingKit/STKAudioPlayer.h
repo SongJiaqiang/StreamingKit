@@ -44,9 +44,9 @@
 #include "UIKit/UIApplication.h"
 #endif
 
-typedef enum
-{
-    STKAudioPlayerStateReady,
+
+typedef NS_ENUM(NSUInteger, STKAudioPlayerState) {
+    STKAudioPlayerStateReady = 0,
     STKAudioPlayerStateRunning = 1,
     STKAudioPlayerStatePlaying = (1 << 1) | STKAudioPlayerStateRunning,
     STKAudioPlayerStateBuffering = (1 << 2) | STKAudioPlayerStateRunning,
@@ -54,31 +54,26 @@ typedef enum
     STKAudioPlayerStateStopped = (1 << 4),
     STKAudioPlayerStateError = (1 << 5),
     STKAudioPlayerStateDisposed = (1 << 6)
-}
-STKAudioPlayerState;
+};
 
-typedef enum
-{
-	STKAudioPlayerStopReasonNone = 0,
-	STKAudioPlayerStopReasonEof,
-	STKAudioPlayerStopReasonUserAction,
-	STKAudioPlayerStopReasonPendingNext,
-	STKAudioPlayerStopReasonDisposed,
-	STKAudioPlayerStopReasonError = 0xffff
-}
-STKAudioPlayerStopReason;
+typedef NS_ENUM(NSUInteger, STKAudioPlayerStopReason) {
+    STKAudioPlayerStopReasonNone = 0,
+    STKAudioPlayerStopReasonEof,
+    STKAudioPlayerStopReasonUserAction,
+    STKAudioPlayerStopReasonPendingNext,
+    STKAudioPlayerStopReasonDisposed,
+    STKAudioPlayerStopReasonError = 0xffff
+};
 
-typedef enum
-{
-	STKAudioPlayerErrorNone = 0,
-	STKAudioPlayerErrorDataSource,
+typedef NS_ENUM(NSUInteger, STKAudioPlayerErrorCode) {
+    STKAudioPlayerErrorNone = 0,
+    STKAudioPlayerErrorDataSource,
     STKAudioPlayerErrorStreamParseBytesFailed,
     STKAudioPlayerErrorAudioSystemError,
     STKAudioPlayerErrorCodecError,
     STKAudioPlayerErrorDataNotFound,
     STKAudioPlayerErrorOther = 0xffff
-}
-STKAudioPlayerErrorCode;
+};
 
 typedef struct
 {
